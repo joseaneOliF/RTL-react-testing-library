@@ -42,7 +42,8 @@ describe('Testa o componente Pokemon', () => {
     expect(pokemonType).toHaveTextContent(pokemonList[0].type);
 
     const pokemonWeight2 = screen.getByTestId('pokemon-weight');
-    expect(pokemonWeight2).toHaveTextContent(`${pokemonWeight.value} ${pokemonWeight.measurementUnit}`);
+    expect(pokemonWeight2)
+      .toHaveTextContent(`${pokemonWeight.value} ${pokemonWeight.measurementUnit}`);
 
     const PokemonImg = screen.getByAltText(/Pikachu sprite/i);
     expect(PokemonImg).toHaveAttribute('src', 'https://cdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png');
